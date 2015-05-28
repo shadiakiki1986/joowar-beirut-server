@@ -1,7 +1,6 @@
 <?php
 
-//define("ROOT", "/home/ubuntu/Development/zboota-server"); // Development ROOT
-require_once '/etc/joowar-beirut-server-config.php';
+require_once dirname(__FILE__).'/../config.php';
 require_once ROOT.'/lib/JoowarBeirutS3Client.php';
 
 $s3=new JoowarBeirutS3Client();

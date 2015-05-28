@@ -5,7 +5,7 @@ header("Access-Control-Allow-Origin: *");
 # Example usage:
 # php loadMap.php mapLaMadonna.json
 
-require_once '/etc/joowar-beirut-server-config.php';
+require_once dirname(__FILE__).'/../../../config.php';
 require_once ROOT.'/lib/JoowarBeirutS3Client.php';
 
 if(isset($argc) && $argc>1) {

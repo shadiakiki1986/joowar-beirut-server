@@ -15,8 +15,7 @@ header("Access-Control-Allow-Origin: *");
 #			...
 #		});                                                                       
 
-
-require_once '/etc/joowar-beirut-server-config.php';
+require_once dirname(__FILE__).'/../../../config.php';
 require_once ROOT.'/lib/JoowarBeirutS3Client.php';
 
 # Angular/php-post stuff
@@ -37,5 +36,7 @@ if(basename($name0)!=$name0) {
 	// open the file in a binary mode
 	$s3=new JoowarBeirutS3Client();
 	$s3->connect();
-	echo $s3->put($name0,$data);
+	$s3->put($name0,$data);
+	echo "Done";
+
 }
