@@ -1,6 +1,6 @@
 <?php
-require_once '/etc/joowar-beirut-server-config.php';
-include AWS_PHAR;
+
+require_once dirname(__FILE__).'/../config.php';
 use Aws\S3\S3Client;
 
 class JoowarBeirutS3Client {
